@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CategorySelectorSheet extends StatelessWidget {
+class PeriodSelectorSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 350,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
@@ -37,7 +37,7 @@ class CategorySelectorSheet extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text('Сортировать по...', style: TextStyle( fontWeight: FontWeight.bold, fontSize: 18),),
+                Text('Отобрать за...', style: TextStyle( fontWeight: FontWeight.bold, fontSize: 18),),
               ],
             ),
             SizedBox(height: 24,),
@@ -47,7 +47,7 @@ class CategorySelectorSheet extends StatelessWidget {
                 children: <Widget>[
                   Icon(Icons.check_circle_outline, color: Colors.black26,),
                   SizedBox(width: 10),
-                  Text('Скачиваниям', style: TextStyle( fontSize: 16 ),),
+                  Text('24 часа', style: TextStyle( fontSize: 16 ),),
                 ],
               ),
             ),
@@ -59,7 +59,31 @@ class CategorySelectorSheet extends StatelessWidget {
                 children: <Widget>[
                   Icon(Icons.check_circle, color: Colors.pinkAccent[400],),
                   SizedBox(width: 10),
-                  Text('Просмотрам', style: TextStyle( fontSize: 16 ),),
+                  Text('Неделю', style: TextStyle( fontSize: 16 ),),
+                ],
+              ),
+            ),
+            SizedBox( height: 10,),
+            Divider(),
+            SizedBox( height: 10,),
+            Container(
+              child: Row(
+                children: <Widget>[
+                  Icon(Icons.check_circle_outline, color: Colors.black26,),
+                  SizedBox(width: 10),
+                  Text('Месяц', style: TextStyle( fontSize: 16 ),),
+                ],
+              ),
+            ),
+            SizedBox( height: 10,),
+            Divider(),
+            SizedBox( height: 10,),
+            Container(
+              child: Row(
+                children: <Widget>[
+                  Icon(Icons.check_circle_outline, color: Colors.black26,),
+                  SizedBox(width: 10),
+                  Text('Год', style: TextStyle( fontSize: 16 ),),
                 ],
               ),
             ),

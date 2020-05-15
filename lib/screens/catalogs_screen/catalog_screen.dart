@@ -113,7 +113,7 @@ class CatalogScreen extends StatelessWidget {
                           Text('01.12.2020'),
                         ],
                       ),
-                      onTap: () {},
+                      onTap: () => Navigator.of(context).pushNamed('/dataset'),
                     ),
                   );
                 },
