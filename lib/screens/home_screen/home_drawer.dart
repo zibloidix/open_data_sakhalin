@@ -45,10 +45,6 @@ class HomeDrawer extends StatelessWidget {
                     onTap: () => Navigator.of(context).pushNamed('/search'),
                   ),
                   ListTile(
-                    title: Text('Главная', style: _menuItemTextStyle),
-                    onTap: () => Navigator.of(context).pushNamed('/'),
-                  ),
-                  ListTile(
                     title: Text('Каталог данных', style: _menuItemTextStyle),
                     onTap: () => Navigator.of(context).pushNamed('/catalog'),
                   ),
