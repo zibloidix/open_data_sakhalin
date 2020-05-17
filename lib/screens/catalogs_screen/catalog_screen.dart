@@ -175,7 +175,7 @@ class CatalogScreenState extends State<CatalogScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.pink,
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () => Navigator.of(context).pushNamed('/add'),
       ),
     );
   }

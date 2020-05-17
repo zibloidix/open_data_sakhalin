@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:open_data_sakhalin/screens/add_screen/add_screen.dart';
 import 'package:open_data_sakhalin/screens/catalogs_screen/catalog_screen.dart';
 import 'package:open_data_sakhalin/screens/dataset_screen/dataset_screen.dart';
 import 'package:open_data_sakhalin/screens/home_screen/home_screen.dart';
@@ -21,7 +22,7 @@ class OpenDataSakhalin extends StatelessWidget {
         '/catalog': (context) => CatalogScreen(),
         '/search': (context) => SearchScreen(), 
         '/dataset': (context) => DatasetScreen(),
-        // '/dataset-editor': (context) => DatasetEditorScreen(),
+        '/add': (context) => AddScreen(),
       }
     );
   }
