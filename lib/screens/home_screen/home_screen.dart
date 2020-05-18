@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:open_data_sakhalin/screens/home_screen/category_selector_sheet.dart';
 import 'package:open_data_sakhalin/screens/home_screen/home_drawer.dart';
+import 'package:open_data_sakhalin/screens/home_screen/home_screen_jumbotron.dart';
+import 'package:open_data_sakhalin/screens/home_screen/home_screen_subtitle.dart';
+import 'package:open_data_sakhalin/screens/home_screen/home_screen_title.dart';
+import 'package:open_data_sakhalin/screens/home_screen/home_screen_top_menu.dart';
+import 'package:open_data_sakhalin/screens/home_screen/news_widget.dart';
 import 'package:open_data_sakhalin/screens/home_screen/period_selector_sheet.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,103 +33,33 @@ class HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   children: <Widget>[
                     SizedBox(height: 35,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        IconButton(
-                          icon: Icon(Icons.menu, color: Colors.white, size: 30),
-                          onPressed: () => Scaffold.of(context).openDrawer(),
-                        ),
-                        IconButton(
-                          icon: Icon(Icons.search, color: Colors.white, size: 30),
-                          onPressed: () => Navigator.of(context).pushNamed('/search'),
-                        ),
-                      ],
+                    HomeScreenTopMenu(),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //   children: <Widget>[
+                    //     IconButton(
+                    //       icon: Icon(Icons.menu, color: Colors.white, size: 30),
+                    //       onPressed: () => Scaffold.of(context).openDrawer(),
+                    //     ),
+                    //     IconButton(
+                    //       icon: Icon(Icons.search, color: Colors.white, size: 30),
+                    //       onPressed: () => Navigator.of(context).pushNamed('/search'),
+                    //     ),
+                    //   ],
+                    // ),
+                    SizedBox( height: 20,),
+                    HomeScreenJumbotron(
+                      title: 'Каталог открытых финансовых данных Сахалинской области',
+                      routerName: '/catalog',
                     ),
                     SizedBox( height: 20,),
-                    InkWell(
-                      borderRadius: BorderRadius.circular(16),
-                      highlightColor: Colors.deepPurpleAccent[400],
-                      onTap: (){
-                        Navigator.of(context).pushNamed('/catalog');
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.all(8.0),
-                        width: double.infinity,
-                        height: 230,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.deepPurpleAccent[400],
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(14.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                Text(
-                                  'Каталог открытых финансовых данных Сахалинской области',
-                                  style: TextStyle(fontSize: 26, fontWeight: FontWeight.w300, color: Colors.indigo[50]),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+                    HomeScreenTitle(title: 'Популярные',),
+                    HomeScreenSubtitle(
+                      subtitle: 'По просмотрам', 
+                      itemsCountTitle: '10+ Наборов',
+                      bottomSheetContent: CategorySelectorSheet(),
                     ),
-                    SizedBox( height: 20,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Text('Популярные', style: TextStyle(fontSize: 36, color: Colors.white)),
-                        ),
-                        IconButton(
-                          icon: Icon(Icons.more_horiz, size: 30, color: Colors.white,),
-                          onPressed: (){},
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(left: 10),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(20.0),
-                            onTap: () { 
-                              showBottomSheet(
-                                context: context, 
-                                backgroundColor: Colors.transparent,
-                                builder: (context) => CategorySelectorSheet(), 
-                              );
-                             },
-                            child: Container(
-                              padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 2.0),
-                              decoration: BoxDecoration(
-                                color: Colors.pink,
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Row(
-                                // crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(' По просмотрам', style: TextStyle(color: Colors.white),),
-                                  SizedBox( width: 10,),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 4.0),
-                                    child: Icon(Icons.keyboard_arrow_down, color: Colors.black54,),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Text('10+ Наборов', style: TextStyle( color: Colors.white60),),
-                        ),
-                      ],
-                    ),
+                    
                     Container(
                       height: 400,
                       padding: EdgeInsets.only(top: 30),
@@ -181,134 +116,16 @@ class HomeScreenState extends State<HomeScreen> {
                     SizedBox( height: 20,),
 
                     SizedBox( height: 20,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Text('Новости', style: TextStyle(fontSize: 36, color: Colors.white)),
-                        ),
-                        IconButton(
-                          icon: Icon(Icons.more_horiz, size: 30, color: Colors.white,),
-                          onPressed: (){},
-                        ),
-                      ],
+                    
+                    HomeScreenTitle(title: 'Новости',),
+                    
+                    HomeScreenSubtitle(
+                      subtitle: 'За неделю', 
+                      itemsCountTitle: '3+ Новости', 
+                      bottomSheetContent: PeriodSelectorSheet(),
                     ),
 
-                    Row(
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(left: 10),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(20.0),
-                            onTap: () { 
-                              showBottomSheet(
-                                context: context, 
-                                backgroundColor: Colors.transparent,
-                                builder: (context) => PeriodSelectorSheet(), 
-                              );
-                             },
-                            child: Container(
-                              padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 2.0),
-                              decoration: BoxDecoration(
-                                color: Colors.pink,
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Row(
-                                // crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(' За неделю', style: TextStyle(color: Colors.white),),
-                                  SizedBox( width: 10,),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 4.0),
-                                    child: Icon(Icons.keyboard_arrow_down, color: Colors.black54,),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Text('5+ Новостей', style: TextStyle( color: Colors.white60),),
-                        ),
-                      ],
-                    ),
-
-                    Container(
-                      height: 150,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: <Widget>[
-                          
-                          Container(
-                            height: 148,
-                            width: 240,
-                            padding: EdgeInsets.all(10),
-                            child: Card(
-                              color: Colors.deepPurpleAccent[400],
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: <Widget>[
-                                    Text(
-                                      'О мерах поддержки субъектам малого и среднего предпринимательства',
-                                      style: TextStyle( fontSize: 16, fontWeight: FontWeight.w400, color: Colors.indigo[50]),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-
-                          Container(
-                            height: 148,
-                            width: 240,
-                            padding: EdgeInsets.all(10),
-                            child: Card(
-                              color: Colors.deepPurpleAccent[400],
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: <Widget>[
-                                    Text(
-                                      'Старт общественного голосования за общественные инициативы',
-                                      style: TextStyle( fontSize: 16, fontWeight: FontWeight.w400, color: Colors.indigo[50]),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-
-                          Container(
-                            height: 148,
-                            width: 240,
-                            padding: EdgeInsets.all(10),
-                            child: Card(
-                              color: Colors.deepPurpleAccent[400],
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: <Widget>[
-                                    Text(
-                                      'Конкурс проектов по представлению бюджетов и открытых данных',
-                                      style: TextStyle( fontSize: 16, fontWeight: FontWeight.w400, color: Colors.indigo[50]),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-
-                          
-                          
-                        ],
-                      ),
-                    ),
+                    NewsWidget(),
 
                   
                   ],
