@@ -1,0 +1,422 @@
+[
+    {
+      "dataset_id": "6500005657_tablica_dohodov_budgeta",
+      "name": "форма_0503317M_таблица_Доходы бюджета",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=5",
+      "createdDate": "05.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2016",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_tablica_dohodov_budgeta/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_tablica_dohodov_budgeta/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_tablica_rashodov",
+      "name": "форма_0503317M_таблица_Расходы",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=6",
+      "createdDate": "05.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_tablica_rashodov/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_tablica_rashodov/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_tablica_istochniki_finasirovaniya",
+      "name": "форма_0503317M_таблица_Источники финансирования",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=7",
+      "createdDate": "05.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_tablica_istochniki_finasirovaniya/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_tablica_istochniki_finasirovaniya/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_tablica_konsolidiruemih_raschetov",
+      "name": "форма_0503317M_таблица_Таблица консолидируемых расчетов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=8",
+      "createdDate": "05.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_tablica_konsolidiruemih_raschetov/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_tablica_konsolidiruemih_raschetov/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_realizacia_ukazov_prezidenta_RF",
+      "name": "Реализация Указов Президента РФ (по мероприятиям и источникам)",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=20",
+      "createdDate": "30.12.2016",
+      "updatedDate": "30.12.2016",
+      "relevanceDate": "30.12.2016",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_realizacia_ukazov_prezidenta_RF/data-2016-12-30T00-00-structure-.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_realizacia_ukazov_prezidenta_RF/structure-2016-12-30T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_prognoz_postupleniya_dohodov_na_period_2018_2020",
+      "name": "Прогноз поступления доходов на период 2018-2020 годы",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=21",
+      "createdDate": "31.10.2017",
+      "updatedDate": "31.10.2017",
+      "relevanceDate": "31.10.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_prognoz_postupleniya_dohodov_na_period_2018_2020/data-2017-10-31T00-00-structure-2017-10-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_prognoz_postupleniya_dohodov_na_period_2018_2020/structure-2017-10-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_functional_structure_expenditures_na_period_2018_2020",
+      "name": "Функциональная структура расходов областного бюджета на период 2018-2020 годы",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=22",
+      "createdDate": "08.11.2017",
+      "updatedDate": "08.11.2017",
+      "relevanceDate": "08.11.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_functional_structure_expenditures_na_period_2018_2020/data-2017-11-09T00-00-structure-.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_functional_structure_expenditures_na_period_2018_2020/structure-2017-11-09T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_budget_assign_2018_gov_support",
+      "name": "Общий объем и распределение бюджетных ассигнований, направляемых на государственную поддержку семьи и детей, на 2018 год",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=28",
+      "createdDate": "15.11.2017",
+      "updatedDate": "15.11.2017",
+      "relevanceDate": "15.11.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_budget_assign_2018_gov_support/data-2017-11-15T00-00-structure-2017-11-15T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_budget_assign_2018_gov_support/structure-2017-11-15T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_prognoz_postupleniya_dohodov_na_period_2019_2021",
+      "name": "Прогноз поступлений доходов на 2019-2021 годы",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=30",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_prognoz_postupleniya_dohodov_na_period_2019_2021/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_prognoz_postupleniya_dohodov_na_period_2019_2021/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_budget_assign_2020_2021_gov_support",
+      "name": "Общий объем и распределение бюджетных ассигнований, направляемых на государственную поддержку семьи и детей, на плановый период 2020 и 2021 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=34",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_budget_assign_2020_2021_gov_support/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_budget_assign_2020_2021_gov_support/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_functional_structure_expenditures_na_2019",
+      "name": "Функциональная структура расходов областного бюджета на 2019 год",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=36",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_functional_structure_expenditures_na_2019/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_functional_structure_expenditures_na_2019/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_cassa_plan_2015_2016",
+      "name": "Сведения об использовании средств областного и федерального бюджетов, юридических и физических лиц на реализацию мероприятий государственной программы",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=9",
+      "createdDate": "05.12.2016",
+      "updatedDate": "29.12.2016",
+      "relevanceDate": "29.12.2016",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_cassa_plan_2015_2016/data-2017-02-07T00-00-structure-2016-12-06T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_cassa_plan_2015_2016/structure-2016-12-06T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_pokazateli_plan_2015_2016",
+      "name": "Сведения о степени реализации мероприятий государственной программы",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=10",
+      "createdDate": "05.12.2016",
+      "updatedDate": "29.12.2016",
+      "relevanceDate": "29.12.2016",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_pokazateli_plan_2015_2016/data-2017-02-27T00-00-structure-2016-12-06T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_pokazateli_plan_2015_2016/structure-2016-12-06T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_structure_expenditure_budget_2020_2021",
+      "name": "Ведомственная структура расходов областного бюджета на плановый период 2020 и 2021 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=31",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2020_2021/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2020_2021/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_program_structure_budget_2019",
+      "name": "Программная структура расходов областного бюджета на 2019 год",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=37",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_program_structure_budget_2019/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_program_structure_budget_2019/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_structure_expenditure_budget_2019",
+      "name": "Ведомственная структура расходов областного бюджета на 2019 год",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=38",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2019/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2019/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_prognoz_postupleniya_dohodov_na_period_2020_2022",
+      "name": "Прогноз поступлений доходов областного бюджета на 2020 год и на плановый период 2021 и 2022 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=41",
+      "createdDate": "19.12.2019",
+      "updatedDate": "19.12.2019",
+      "relevanceDate": "19.12.2019",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_prognoz_postupleniya_dohodov_na_period_2020_2022/data-2019-12-19T00-00-structure-2019-12-19T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_prognoz_postupleniya_dohodov_na_period_2020_2022/structure-2019-12-19T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_program_structure_budget_2020_2022",
+      "name": "Программную структуру расходов областного бюджета на 2020 год и на плановый период 2021 и 2022 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=43",
+      "createdDate": "19.12.2019",
+      "updatedDate": "19.12.2019",
+      "relevanceDate": "19.12.2019",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_program_structure_budget_2020_2022/data-2019-12-19T00-00-structure-2019-12-19T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_program_structure_budget_2020_2022/structure-2019-12-19T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_budget_assign_2020_2022_gov_support",
+      "name": "Общий объем и распределение бюджетных ассигнований, направляемых на государственную поддержку семьи и детей, на 2020 год и на плановый период 2021 и 2022 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=45",
+      "createdDate": "19.12.2019",
+      "updatedDate": "19.12.2019",
+      "relevanceDate": "19.12.2019",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_budget_assign_2020_2022_gov_support/data-2019-12-19T00-00-structure-2019-12-19T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_budget_assign_2020_2022_gov_support/structure-2019-12-19T00-00.csv"
+    },
+    {
+      "dataset_id": "6510003433_Tablica_Dohodov",
+      "name": "форма_0503317M_таблица_Доходы бюджета (Анивский ГО)",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=11",
+      "createdDate": "06.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6510003433_Tablica_Dohodov/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6510003433_Tablica_Dohodov/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6510003433_Istochniki_finansirovaniya",
+      "name": "форма_0503317M_таблица_Источники финансирования (Анивский ГО)",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=12",
+      "createdDate": "06.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6510003433_Istochniki_finansirovaniya/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6510003433_Istochniki_finansirovaniya/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6510003433_Tablica_Rashodov",
+      "name": "форма_0503317M_таблица_Расходы (Анивский ГО)",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=13",
+      "createdDate": "06.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6510003433_Tablica_Rashodov/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6510003433_Tablica_Rashodov/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6510003433_Tablica_Konsolidiruemih_Rashodov",
+      "name": "форма_0503317M_таблица_Таблица консолидируемых расчетов (Анивский ГО)",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=14",
+      "createdDate": "06.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6510003433_Tablica_Konsolidiruemih_Rashodov/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6510003433_Tablica_Konsolidiruemih_Rashodov/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6501025832_Tablica_Dohodov",
+      "name": "форма_0503317M_таблица_Доходы бюджета (Южно-Сахалинск)",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=15",
+      "createdDate": "06.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6501025832_Tablica_Dohodov/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6501025832_Tablica_Dohodov/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6501025832_Tablica_Rashodov",
+      "name": "форма_0503317M_таблица_Расходы (Южно-Сахалинск)",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=16",
+      "createdDate": "06.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6501025832_Tablica_Rashodov/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6501025832_Tablica_Rashodov/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6501025832_Istochniki_Finansirovania",
+      "name": "форма_0503317M_таблица_Источники финансирования (Южно-Сахалинск)",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=17",
+      "createdDate": "06.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6501025832_Istochniki_Finansirovania/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6501025832_Istochniki_Finansirovania/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6501025832_Tablica_Konsolidiruemih_raschetov",
+      "name": "форма_0503317M_таблица_Таблица консолидируемых расчетов (Южно-Сахалинск)",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=18",
+      "createdDate": "06.12.2016",
+      "updatedDate": "31.08.2017",
+      "relevanceDate": "26.09.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6501025832_Tablica_Konsolidiruemih_raschetov/data-2017-08-31T00-00-structure-2017-08-31T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6501025832_Tablica_Konsolidiruemih_raschetov/structure-2017-08-31T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657Svodnii_otchet_razmesheniya_zakazov",
+      "name": "Сводный отчет размещения заказов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=19",
+      "createdDate": "07.12.2016",
+      "updatedDate": "07.12.2016",
+      "relevanceDate": "07.12.2016",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657Svodnii_otchet_razmesheniya_zakazov/data-2016-12-07T00-00-structure-2016-12-07T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657Svodnii_otchet_razmesheniya_zakazov/structure-2016-12-07T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_functional_structure_expenditures_na_period_2020_2022",
+      "name": "Функциональная структура расходов областного бюджета на 2020 год и на плановый период 2021 и 2022 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=42",
+      "createdDate": "19.12.2019",
+      "updatedDate": "19.12.2019",
+      "relevanceDate": "19.12.2019",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_functional_structure_expenditures_na_period_2020_2022/data-2019-12-19T00-00-structure-2019-12-19T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_functional_structure_expenditures_na_period_2020_2022/structure-2019-12-19T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_budget_assign_2019_2020",
+      "name": "Распределение бюджетных ассигнований на плановый период 2019 и 2020 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=23",
+      "createdDate": "09.11.2017",
+      "updatedDate": "09.11.2017",
+      "relevanceDate": "09.11.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_budget_assign_2019_2020/data-2017-11-09T00-00-structure-2017-11-09T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_budget_assign_2019_2020/structure-2017-11-09T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_program_structure_budget_2018",
+      "name": "Программная структура расходов областного бюджета на 2018 год",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=24",
+      "createdDate": "14.11.2017",
+      "updatedDate": "14.11.2017",
+      "relevanceDate": "14.11.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_program_structure_budget_2018/data-2017-11-14T00-00-structure-2017-11-14T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_program_structure_budget_2018/structure-2017-11-14T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_budget_assign_target_2019_2020",
+      "name": "Распределение бюджетных ассигнований на плановый период по целевым статьям 2019 и 2020 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=25",
+      "createdDate": "14.11.2017",
+      "updatedDate": "14.11.2017",
+      "relevanceDate": "14.11.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_budget_assign_target_2019_2020/data-2017-11-14T00-00-structure-2017-11-14T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_budget_assign_target_2019_2020/structure-2017-11-14T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_structure_expenditure_budget_2018",
+      "name": "Ведомственная структура расходов областного бюджета на 2018 год",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=26",
+      "createdDate": "14.11.2017",
+      "updatedDate": "14.11.2017",
+      "relevanceDate": "14.11.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2018/data-2017-11-14T00-00-structure-2017-11-14T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2018/structure-2017-11-14T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_structure_expenditure_budget_2019_2020",
+      "name": "Ведомственная структура расходов областного бюджета на плановый период 2019 и 2020 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=27",
+      "createdDate": "15.11.2017",
+      "updatedDate": "15.11.2017",
+      "relevanceDate": "15.11.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2019_2020/data-2017-11-15T00-00-structure-2017-11-15T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2019_2020/structure-2017-11-15T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_budget_assign_2019_2020_gov_support",
+      "name": "Общий объем и распределение бюджетных ассигнований, направляемых на государственную поддержку семьи и детей, на плановый период 2019 и 2020 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=29",
+      "createdDate": "15.11.2017",
+      "updatedDate": "15.11.2017",
+      "relevanceDate": "15.11.2017",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_budget_assign_2019_2020_gov_support/data-2017-11-15T00-00-structure-2017-11-15T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_budget_assign_2019_2020_gov_support/structure-2017-11-15T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_istochniki_finasirovaniya_deficita_2020_2021",
+      "name": "Источники финансирования дефицита на  2020- 2021 годы",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=35",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_istochniki_finasirovaniya_deficita_2020_2021/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_istochniki_finasirovaniya_deficita_2020_2021/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_program_structure_budget_2020_2021",
+      "name": "Программная структура расходов областного бюджета на 2020 - 2021 годы",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=32",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_program_structure_budget_2020_2021/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_program_structure_budget_2020_2021/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_functional_structure_expenditures_na_period_2020_2021",
+      "name": "Функциональная структура расходов областного бюджета на период 2020-2021 годы",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=33",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_functional_structure_expenditures_na_period_2020_2021/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/ 6500005657_functional_structure_expenditures_na_period_2020_2021/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_budget_assign_2019_gov_support",
+      "name": "Общий объем и распределение бюджетных ассигнований, направляемых на государственную поддержку семьи и детей, на 2019  год",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=39",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_budget_assign_2019_gov_support/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_budget_assign_2019_gov_support/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_istochniki_finasirovaniya_deficita_2019",
+      "name": "Источники финансирования дефицита на  2019 год",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=40",
+      "createdDate": "24.12.2018",
+      "updatedDate": "24.12.2018",
+      "relevanceDate": "24.12.2018",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_istochniki_finasirovaniya_deficita_2019/data-2018-12-24T00-00-structure-2018-12-24T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_istochniki_finasirovaniya_deficita_2019/structure-2018-12-24T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_istochniki_finasirovaniya_deficita_2020_2022",
+      "name": "Источники финансирования дефицита областного бюджета на 2020 год и на плановый период 2021 и 2022 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=46",
+      "createdDate": "19.12.2019",
+      "updatedDate": "19.12.2019",
+      "relevanceDate": "19.12.2019",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_istochniki_finasirovaniya_deficita_2020_2022/data-2019-12-19T00-00-structure-2019-12-19T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_istochniki_finasirovaniya_deficita_2020_2022/structure-2019-12-19T00-00.csv"
+    },
+    {
+      "dataset_id": "6500005657_structure_expenditure_budget_2020_2022",
+      "name": "Ведомственную структуру расходов областного бюджета на 2020 год и на плановый период 2021 и 2022 годов",
+      "meta_url": "https://openbudget.sakhminfin.ru/OpenData3/Meta?id_dataset=44",
+      "createdDate": "19.12.2019",
+      "updatedDate": "19.12.2019",
+      "relevanceDate": "19.12.2019",
+      "header_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2020_2022/data-2019-12-19T00-00-structure-2019-12-19T00-00.csv",
+      "data_url": "https://openbudget.sakhminfin.ru/opendata3/6500005657_structure_expenditure_budget_2020_2022/structure-2019-12-19T00-00.csv"
+    }
+  ]

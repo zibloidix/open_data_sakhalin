@@ -46,7 +46,12 @@ class AddScreenState extends State<AddScreen> {
                         ),
                         child: Column(
                           children: <Widget>[
-                            SizedBox(height: 90,),
+                            SizedBox(height: 30),
+                            Text('Добавить набор данных', style: TextStyle(fontSize: 20)),
+                            SizedBox(height: 5,),
+                            Text('Укажите ссылки на структуру', style: TextStyle(fontSize: 13, color:Colors.black45)),
+                            Text('и набор данных', style: TextStyle(fontSize: 13, color:Colors.black45)),
+                            SizedBox(height: 30,),
                             Container(
                               width: 120,
                               height: 120,
