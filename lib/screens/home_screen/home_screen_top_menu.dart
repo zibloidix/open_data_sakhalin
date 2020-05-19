@@ -11,8 +11,8 @@ class HomeScreenTopMenu extends StatelessWidget {
           onPressed: () => Scaffold.of(context).openDrawer(),
         ),
         IconButton(
-          icon: Icon(Icons.search, color: Colors.white, size: 30),
-          onPressed: () => Navigator.of(context).pushNamed('/search'),
+          icon: Icon(Icons.notifications_none , color: Colors.white, size: 30),
+          onPressed: () => Navigator.of(context).pushNamed('/notifications'),
         ),
       ],
     );

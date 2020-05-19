@@ -15,7 +15,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class HomeScreenState extends State<HomeScreen> {
-  
+  double _sizedBoxHeight = 28.0;
   @override
   Widget build(BuildContext context) {  
     return Container(
@@ -29,22 +29,20 @@ class HomeScreenState extends State<HomeScreen> {
             child: Container(
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 35,),
+
+                  SizedBox(height: _sizedBoxHeight,),
+
                   HomeScreenTopMenu(),
-                  SizedBox( height: 20,),
+
+                  SizedBox( height: _sizedBoxHeight,),
+
                   HomeScreenJumbotron(
                     title: 'Каталог открытых финансовых данных Сахалинской области',
                     routerName: '/catalog',
                   ),
-                  SizedBox( height: 20,),
-                  HomeScreenTitle(title: 'Популярные',),
-                  HomeScreenSubtitle(
-                    subtitle: 'По просмотрам', 
-                    itemsCountTitle: '10+ Наборов',
-                    bottomSheetContent: CategorySelectorSheet(),
-                  ),
-                  CardStackWidget(),
-                  SizedBox( height: 20,),
+
+                  SizedBox( height: _sizedBoxHeight,),
+
                   HomeScreenTitle(title: 'Новости',),
                   HomeScreenSubtitle(
                     subtitle: 'За неделю', 
@@ -52,6 +50,26 @@ class HomeScreenState extends State<HomeScreen> {
                     bottomSheetContent: PeriodSelectorSheet(),
                   ),
                   NewsWidget(),
+
+                  SizedBox(height: _sizedBoxHeight,),
+
+                  HomeScreenTitle(title: 'Популярные',),
+                  HomeScreenSubtitle(
+                    subtitle: 'По просмотрам', 
+                    itemsCountTitle: '10+ Наборов',
+                    bottomSheetContent: CategorySelectorSheet(),
+                  ),
+                  CardStackWidget(),
+
+                  SizedBox( height: _sizedBoxHeight,),
+                  
+                  HomeScreenTitle(title: 'Избранные',),
+                  HomeScreenSubtitle(
+                    subtitle: 'За месяц', 
+                    itemsCountTitle: '10+ Наборов',
+                    bottomSheetContent: PeriodSelectorSheet(),
+                  ),
+                  CardStackWidget(),
                 ],
               ),
             ),
