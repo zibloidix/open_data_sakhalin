@@ -3,9 +3,11 @@ import 'dart:math';
 import 'package:faker/faker.dart';
 import 'package:intl/intl.dart';
 import 'package:open_data_sakhalin/models/app_notification.dart';
+import 'package:open_data_sakhalin/models/data_set.dart';
+import 'package:open_data_sakhalin/models/data_sets_catalog.dart';
 
 var faker = Faker();
-
+List<DataSet> datasets = getDataSetsCatalog();
 
 List<AppNotification> notifications = [
   AppNotification(
@@ -34,15 +36,14 @@ class NotificationsScreen extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.all(8.0),
         child: ListView.builder(
-          itemCount: 5,
+          itemCount: 25,
           itemBuilder: (context, index) {
-            var randomIndex = _random.nextInt(notifications.length - 1);
+            var randomIndex = _random.nextInt(notifications.length);
             AppNotification notification = notifications[randomIndex];
             DateTime date = faker.date.dateTime(minYear: 2020, maxYear: 2020);
 
             return Container(
               width: double.infinity,
-              height: 100,
               child: Card(
                 child: ListTile(
                   leading: CircleAvatar(child: Icon(notification.icon), backgroundColor: notification.color, foregroundColor: Colors.white,),
@@ -53,7 +54,7 @@ class NotificationsScreen extends StatelessWidget {
                       Text(DateFormat.yMd().format(date), style: TextStyle(fontSize: 13, color: Colors.black54)),
                     ],
                   ),
-                  subtitle: Text('Длииинннное название набора'),
+                  subtitle: Text(datasets[index].name),
                 ),
               ),
             );

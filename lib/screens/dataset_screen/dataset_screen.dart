@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:open_data_sakhalin/models/data_set.dart';
+import 'package:flutter_tree/flutter_tree.dart';
 
 class DatasetScreen extends StatelessWidget {
+
+  DataSet dataSet;
+
   @override
   Widget build(BuildContext context) {
+    if(ModalRoute.of(context).settings.arguments != null) {
+      dataSet = DataSet.copyFrom(ModalRoute.of(context).settings.arguments);
+    } else {
+      dataSet = DataSet();
+    }
+
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -30,11 +41,11 @@ class DatasetScreen extends StatelessWidget {
                             children: <Widget>[
                               Icon(Icons.remove_red_eye, color: Colors.white54),
                               SizedBox(width: 5,),
-                              Text('12300', style: TextStyle(color: Colors.white)),
+                              Text('${dataSet.viewCount}', style: TextStyle(color: Colors.white)),
                               SizedBox(width: 10,),
                               Icon(Icons.file_download, color: Colors.white54,),
                               SizedBox(width: 5,),
-                              Text('2345', style: TextStyle(color: Colors.white)),
+                              Text('${dataSet.downloadCount}', style: TextStyle(color: Colors.white)),
                             ],
                           )
                         ),
@@ -49,15 +60,15 @@ class DatasetScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Источники финансирования дефицита областного бюджета на 2020 год и на плановый период 2021 и 2022 годов',
+                        '${dataSet.name}',
                         style: TextStyle(fontSize: 34, color: Colors.indigo[50]),
                       ),
                     ),
                     Divider(color: Colors.black45,),
                     SizedBox(height: 10,),
-                    Text('Дата актуальности: 26.09.2017', style: TextStyle(color: Colors.white38),),
+                    Text('Дата актуальности: ${dataSet.relevanceDate}', style: TextStyle(color: Colors.white38),),
                     SizedBox(height: 5,),
-                    Text('Дата публикации: 31.08.2017', style: TextStyle(color: Colors.white38),),
+                    Text('Дата публикации: ${dataSet.createdDate}', style: TextStyle(color: Colors.white38),),
 
                   ],
                 ),
@@ -89,13 +100,35 @@ class DatasetScreen extends StatelessWidget {
               child: ListView.builder(
                   controller: scrollController,
                   itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: Icon(
-                        Icons.folder_open,
-                        color: Colors.yellow,
-                      ),
-                      title: Text('Dataset $index'),
+                    return TreeNode(
+                      title: Text('Функционирование высшего должностного лица субъекта Российской Федерации и муниципального образования'),
+                      children: [
+                        TreeNode(
+                          leading: Icon(Icons.playlist_add),
+                          title: Text('Раздел'),
+                          children: <Widget>[
+                            TreeNode(title: Text('This is a title!')),
+                            TreeNode(
+                              title: Text('This is a title!'),
+                              children: <Widget>[
+                                TreeNode(title: Text('This is a title!')),
+                                TreeNode(title: Text('This is a title!')),
+                                TreeNode(title: Text('This is a title!')),
+                              ],
+                            ),
+                            
+                            
+                          ],
+                        ),
+                      ],
                     );
+                    // return ListTile(
+                    //   leading: Icon(
+                    //     Icons.folder_open,
+                    //     color: Colors.yellow,
+                    //   ),
+                    //   title: Text('Dataset $index'),
+                    // );
                   }),
             ),
           );

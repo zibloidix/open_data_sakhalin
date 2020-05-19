@@ -120,7 +120,7 @@ class CatalogScreenState extends State<CatalogScreen> {
                         icon: Icon(Icons.star_border),
                         onPressed: (){},
                       ),
-                      onTap: () => Navigator.of(context).pushNamed('/dataset'),
+                      onTap: () => Navigator.of(context).pushNamed('/dataset', arguments: datasets[index]),
                     ),
                   );
                 },

@@ -27,33 +27,36 @@ class CardStackWidget extends StatelessWidget {
                 )
               ],
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  datasets[index].name,
-                  style: TextStyle(fontSize: 20, color: Colors.black87),
-                ),
-                SizedBox( height: 10),
-                Container(
-                  width: 110,
-                  padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 6.0),
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent[400],
-                    borderRadius: BorderRadius.circular(20)
+            child: InkWell(
+              onTap: () => Navigator.of(context).pushNamed('/dataset', arguments: datasets[index]),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    datasets[index].name,
+                    style: TextStyle(fontSize: 20, color: Colors.black87),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Icon(Icons.remove_red_eye, color: Colors.white54,),
-                      SizedBox(width: 5,),
-                      Text('1200', style: TextStyle( color: Colors.white),),
-                    ],
+                  SizedBox( height: 10),
+                  Container(
+                    width: 100,
+                    padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 6.0),
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurpleAccent[400],
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Icon(Icons.remove_red_eye, color: Colors.white54,),
+                        SizedBox(width: 5,),
+                        Text('${datasets[index].viewCount}', style: TextStyle( color: Colors.white),),
+                      ],
+                    ),
                   ),
-                ),
-                
-              ],
+                  
+                ],
+              ),
             ),
           );
         },
