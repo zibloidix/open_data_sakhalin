@@ -58,7 +58,7 @@ class DatasetScreen extends StatelessWidget {
                         
                         IconButton(
                           icon: Icon(Icons.insert_chart, color: Colors.white, size: 30,),
-                          onPressed: (){},
+                          onPressed: () => Navigator.of(context).pushNamed('/charts'),
                         ),
                       ],
                       

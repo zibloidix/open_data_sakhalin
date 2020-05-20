@@ -14,10 +14,6 @@ class HomeScreenTitle extends StatelessWidget {
           padding: const EdgeInsets.only(left: 10),
           child: Text(title, style: TextStyle(fontSize: 36, color: Colors.white)),
         ),
-        IconButton(
-          icon: Icon(Icons.more_horiz, size: 30, color: Colors.white,),
-          onPressed: (){},
-        ),
       ],
     );
   }
