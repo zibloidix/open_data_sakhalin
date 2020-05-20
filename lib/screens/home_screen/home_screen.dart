@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:open_data_sakhalin/screens/home_screen/add_data_set_widget.dart';
 import 'package:open_data_sakhalin/screens/home_screen/card_stack_widget.dart';
 import 'package:open_data_sakhalin/screens/home_screen/category_selector_sheet.dart';
 import 'package:open_data_sakhalin/screens/home_screen/home_drawer.dart';
@@ -70,6 +71,12 @@ class HomeScreenState extends State<HomeScreen> {
                     bottomSheetContent: PeriodSelectorSheet(),
                   ),
                   CardStackWidget(),
+
+                  SizedBox(height: _sizedBoxHeight,),
+
+                  AddDataSetWidget(),
+
+                  SizedBox(height: _sizedBoxHeight,),
                 ],
               ),
             ),

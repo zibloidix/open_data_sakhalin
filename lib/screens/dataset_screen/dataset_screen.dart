@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:open_data_sakhalin/models/data_set.dart';
 import 'package:flutter_tree/flutter_tree.dart';
+import 'package:open_data_sakhalin/models/mock_data_set_values.dart';
+import 'dart:math';
+
+List<String> dataSetsRowNames= getMockDataSetRowNames();
+List<String> dataSetsCollNames = getMockDataSetCollNames();
 
 class DatasetScreen extends StatelessWidget {
 
   DataSet dataSet;
+  Random _random = Random();
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +57,7 @@ class DatasetScreen extends StatelessWidget {
                         ),
                         
                         IconButton(
-                          icon: Icon(Icons.more_horiz, color: Colors.white, size: 30,),
+                          icon: Icon(Icons.insert_chart, color: Colors.white, size: 30,),
                           onPressed: (){},
                         ),
                       ],
@@ -99,27 +105,30 @@ class DatasetScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ListView.builder(
                   controller: scrollController,
+                  itemCount: dataSetsRowNames.length,
                   itemBuilder: (context, index) {
                     return TreeNode(
-                      title: Text('Функционирование высшего должностного лица субъекта Российской Федерации и муниципального образования'),
+                      leading: SizedBox(),
+                      // trailing: SizedBox(),
+                      title: Padding(
+                        padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                        child: Text(dataSetsRowNames[index]),
+                      ),
                       children: [
-                        TreeNode(
-                          leading: Icon(Icons.playlist_add),
-                          title: Text('Раздел'),
-                          children: <Widget>[
-                            TreeNode(title: Text('This is a title!')),
+                        ...dataSetsCollNames.map((coll){
+                          return 
                             TreeNode(
-                              title: Text('This is a title!'),
-                              children: <Widget>[
-                                TreeNode(title: Text('This is a title!')),
-                                TreeNode(title: Text('This is a title!')),
-                                TreeNode(title: Text('This is a title!')),
-                              ],
-                            ),
-                            
-                            
-                          ],
-                        ),
+                            leading: Icon(Icons.arrow_drop_down),
+                            title: Text(coll),
+                            children: <Widget>[
+                              TreeNode(
+                                leading: SizedBox(width: 20,),
+                                title: Text('${_random.nextInt(99999)}', style: TextStyle(fontWeight: FontWeight.w700))
+                              ), 
+                            ],
+                          );
+                        })
+                        
                       ],
                     );
                     // return ListTile(

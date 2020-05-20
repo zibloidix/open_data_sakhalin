@@ -21,7 +21,7 @@ class OpenDataSakhalin extends StatelessWidget {
       routes: {
         '/': (context) => HomeScreen(),
         '/catalog': (context) => CatalogScreen(),
-        // '/search': (context) => SearchScreen(), 
+        '/search': (context) => SearchScreen(), 
         '/notifications': (context) => NotificationsScreen(),
         '/dataset': (context) => DatasetScreen(),
         '/add': (context) => AddScreen(),
