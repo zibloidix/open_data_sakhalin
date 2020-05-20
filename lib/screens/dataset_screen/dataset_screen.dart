@@ -102,45 +102,81 @@ class DatasetScreen extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ListView.builder(
-                  controller: scrollController,
-                  itemCount: dataSetsRowNames.length,
-                  itemBuilder: (context, index) {
-                    return TreeNode(
-                      leading: SizedBox(),
-                      // trailing: SizedBox(),
-                      title: Padding(
-                        padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
-                        child: Text(dataSetsRowNames[index]),
+              padding: const EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
+              child: LayoutBuilder(
+                builder: (context, constraints) => Column(
+                  
+                  children: <Widget>[
+                    Container(
+                      height: 40,
+                      padding: EdgeInsets.only(bottom: 8.0),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: <Widget>[
+                          _getFilterButton('Раздел'),
+                          SizedBox(width: 10,),
+                          _getFilterButton('Подраздел'),
+                          SizedBox(width: 10,),
+                          _getFilterButton('Статья'),
+                          SizedBox(width: 10,),
+                          _getFilterButton('Вид расхода'),
+                        ],
                       ),
-                      children: [
-                        ...dataSetsCollNames.map((coll){
-                          return 
-                            TreeNode(
-                            leading: Icon(Icons.arrow_drop_down),
-                            title: Text(coll),
-                            children: <Widget>[
-                              TreeNode(
-                                leading: SizedBox(width: 20,),
-                                title: Text('${_random.nextInt(99999)}', style: TextStyle(fontWeight: FontWeight.w700))
-                              ), 
-                            ],
-                          );
-                        })
-                        
-                      ],
-                    );
-                    // return ListTile(
-                    //   leading: Icon(
-                    //     Icons.folder_open,
-                    //     color: Colors.yellow,
-                    //   ),
-                    //   title: Text('Dataset $index'),
-                    // );
-                  }),
+                    ),
+                    Container(
+                      height: constraints.maxHeight - 40,
+                      child: ListView.builder(
+                          controller: scrollController,
+                          itemCount: dataSetsRowNames.length,
+                          itemBuilder: (context, index) {
+                            return TreeNode(
+                              leading: SizedBox(),
+                              // trailing: SizedBox(),
+                              title: Padding(
+                                padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                                child: Text(dataSetsRowNames[index]),
+                              ),
+                              children: [
+                                ...dataSetsCollNames.map((coll){
+                                  return 
+                                    TreeNode(
+                                    leading: SizedBox(),
+                                    title: Text(coll),
+                                    children: <Widget>[
+                                      TreeNode(
+                                        leading: SizedBox(width: 20,),
+                                        title: Text('${_random.nextInt(99999)}', style: TextStyle(fontWeight: FontWeight.w700))
+                                      ), 
+                                    ],
+                                  );
+                                })
+                              ],
+                            );
+                          }),
+                    ),
+                  ],
+                ),
+              ),
             ),
           );
         });
+  }
+
+  Widget _getFilterButton(name) {
+    return Container(
+      
+      child: Row(
+        children: <Widget>[
+          Text('$name'),
+          SizedBox(width: 5,),
+          Icon(Icons.keyboard_arrow_down),
+        ],
+      ),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+      decoration: BoxDecoration(
+        color: Colors.black12,
+        borderRadius: BorderRadius.circular(20),
+      ),
+    );
   }
 }
