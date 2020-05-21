@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:open_data_sakhalin/models/data_set.dart';
 import 'package:flutter_tree/flutter_tree.dart';
+import 'package:open_data_sakhalin/models/data_set_row.dart';
+import 'package:open_data_sakhalin/models/mock_data_set_row.dart';
 import 'package:open_data_sakhalin/models/mock_data_set_values.dart';
 import 'dart:math';
 
 List<String> dataSetsRowNames= getMockDataSetRowNames();
 List<String> dataSetsCollNames = getMockDataSetCollNames();
 
-class DatasetScreen extends StatelessWidget {
+
+class DatasetScreen extends StatefulWidget{
+  @override
+  DatasetScreenState createState() => DatasetScreenState();
+}
+
+class DatasetScreenState extends State<DatasetScreen>{
 
   DataSet dataSet;
   Random _random = Random();
-
+  bool _showCheckbox = false;
+  List<DataSetRow> _mockDataSetRows = getMockDataSetRow();
+  
   @override
   Widget build(BuildContext context) {
     if(ModalRoute.of(context).settings.arguments != null) {
@@ -58,7 +68,10 @@ class DatasetScreen extends StatelessWidget {
                         
                         IconButton(
                           icon: Icon(Icons.insert_chart, color: Colors.white, size: 30,),
-                          onPressed: () => Navigator.of(context).pushNamed('/charts'),
+                          onPressed: () {
+                            List<DataSetRow> _selectedRows = _getSelectedRows();
+                            Navigator.of(context).pushNamed('/charts', arguments: _selectedRows); 
+                          },
                         ),
                       ],
                       
@@ -113,6 +126,8 @@ class DatasetScreen extends StatelessWidget {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
+                          _getCompareButton('Сравнить'),
+                          SizedBox(width: 10,),
                           _getFilterButton('Раздел'),
                           SizedBox(width: 10,),
                           _getFilterButton('Подраздел'),
@@ -127,25 +142,34 @@ class DatasetScreen extends StatelessWidget {
                       height: constraints.maxHeight - 40,
                       child: ListView.builder(
                           controller: scrollController,
-                          itemCount: dataSetsRowNames.length,
+                          itemCount: _mockDataSetRows.length,
                           itemBuilder: (context, index) {
+                            
                             return TreeNode(
-                              leading: SizedBox(),
+                              leading: _showCheckbox == false? SizedBox() : Checkbox(
+                                value: _mockDataSetRows[index].isSelected,
+                                onChanged: (value){
+                                  setState(() {
+                                    _mockDataSetRows[index].isSelected = value;
+                                  });
+                                  
+                                },
+                              ),
                               // trailing: SizedBox(),
                               title: Padding(
                                 padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
-                                child: Text(dataSetsRowNames[index]),
+                                child: Text(_mockDataSetRows[index].name),
                               ),
                               children: [
-                                ...dataSetsCollNames.map((coll){
+                                ..._mockDataSetRows[index].values.map((coll){
                                   return 
                                     TreeNode(
                                     leading: SizedBox(),
-                                    title: Text(coll),
+                                    title: Text(coll.title),
                                     children: <Widget>[
                                       TreeNode(
                                         leading: SizedBox(width: 20,),
-                                        title: Text('${_random.nextInt(99999)}', style: TextStyle(fontWeight: FontWeight.w700))
+                                        title: Text('${coll.value}', style: TextStyle(fontWeight: FontWeight.w700))
                                       ), 
                                     ],
                                   );
@@ -162,9 +186,32 @@ class DatasetScreen extends StatelessWidget {
         });
   }
 
+  Widget _getCompareButton(name) {
+    return InkWell(
+      onTap: () {
+        setState(() {
+          _showCheckbox = !_showCheckbox;
+        });
+      },
+      child: Container(
+        child: Row(
+          children: <Widget>[
+            Text('$name'),
+            SizedBox(width: 5,),
+            Icon(Icons.check),
+          ],
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+        decoration: BoxDecoration(
+          color: Colors.greenAccent,
+          borderRadius: BorderRadius.circular(20),
+        ),
+      ),
+    );
+  }
+
   Widget _getFilterButton(name) {
     return Container(
-      
       child: Row(
         children: <Widget>[
           Text('$name'),
@@ -178,5 +225,9 @@ class DatasetScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
     );
+  }
+
+  List<DataSetRow> _getSelectedRows() {
+    return _mockDataSetRows.where( (row) => row.isSelected == true ).toList();
   }
 }
