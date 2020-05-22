@@ -21,28 +21,36 @@ class ChartsScreenState extends State<ChartsScreen> {
     
     return Scaffold(
       backgroundColor: Color(0xff202040),
-      body: Column(
-        children: <Widget>[
-          SizedBox(height: 30,),
-          BarChartSample2(selectedRows: _selectedDataSetRows,),
-          Container(
-            height: 360,
-            child: ListView.builder(
-              itemCount: _selectedDataSetRows.length,
-              itemBuilder: (context, index) {
-                return Container(
-                  decoration: BoxDecoration(
-                    border: Border(bottom: BorderSide(color: Colors.white10))
-                  ),
-                  child: ListTile(
-                    leading: Text('${index + 1}', style: TextStyle(color: Colors.white),),
-                    title: Text(_selectedDataSetRows[index].name, style: TextStyle(color: Colors.white)),
-                  ),
-                );
-              },
-            ),
+      body: LayoutBuilder(
+        builder: (context, constraints) => Container(
+          height: constraints.maxHeight,
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 20,),
+              Container(
+                height: constraints.maxHeight * 0.4 - 20,
+                child: BarChartSample2(selectedRows: _selectedDataSetRows,)
+              ),
+              Container(
+                height: constraints.maxHeight * 0.6,
+                child: ListView.builder(
+                  itemCount: _selectedDataSetRows.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        border: Border(bottom: BorderSide(color: Colors.white10))
+                      ),
+                      child: ListTile(
+                        leading: Text('${index + 1}', style: TextStyle(color: Colors.white54),),
+                        title: Text(_selectedDataSetRows[index].name, style: TextStyle(color: Colors.white70)),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

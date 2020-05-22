@@ -6,6 +6,9 @@ import 'package:open_data_sakhalin/models/data_sets_catalog.dart';
 class CardStackWidget extends StatelessWidget {
 
   List<DataSet> datasets = getDataSetsCatalog();
+  LinearGradient backgroundGradient;
+
+  CardStackWidget({Key key, this.backgroundGradient}): super(key: key);
 
   @override
   Widget build(BuildContext build) {
@@ -26,6 +29,7 @@ class CardStackWidget extends StatelessWidget {
                   blurRadius: 6.0
                 )
               ],
+              gradient: backgroundGradient,
             ),
             child: InkWell(
               onTap: () => Navigator.of(context).pushNamed('/dataset', arguments: datasets[index]),
@@ -35,15 +39,16 @@ class CardStackWidget extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     datasets[index].name,
-                    style: TextStyle(fontSize: 20, color: Colors.black87),
+                    style: TextStyle(fontSize: 22, color: Colors.white),
                   ),
                   SizedBox( height: 10),
                   Container(
                     width: 100,
                     padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 6.0),
                     decoration: BoxDecoration(
-                      color: Colors.deepPurpleAccent[400],
-                      borderRadius: BorderRadius.circular(20)
+                      color: Colors.black26,
+                      borderRadius: BorderRadius.circular(20),
+                      
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

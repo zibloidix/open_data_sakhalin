@@ -81,6 +81,22 @@ class BarChartSample2State extends State<BarChartSample2> {
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
+              SizedBox(height: 20,),
+              Container(
+                height: 30,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(Icons.donut_large, color: Color(0xff53fdd7)),
+                    SizedBox(width: 5),
+                    Text('Сумма за 2020 год', style: TextStyle(color: Color(0xff53fdd7))),
+                    SizedBox(width: 15),
+                    Icon(Icons.donut_large, color: Color(0xffff5182)),
+                    SizedBox(width: 5),
+                    Text('Сумма за 2021 год', style: TextStyle(color: Color(0xffff5182))),
+                  ],
+                ),
+              ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
@@ -90,11 +106,11 @@ class BarChartSample2State extends State<BarChartSample2> {
                 ],
               ),
               const SizedBox(
-                height: 38,
+                height: 10,
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 14.0),
                   child: BarChart(
                     BarChartData(
                       maxY: 100,

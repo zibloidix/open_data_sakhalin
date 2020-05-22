@@ -31,11 +31,11 @@ class HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: <Widget>[
 
-                  SizedBox(height: _sizedBoxHeight,),
+                  SizedBox(height: _sizedBoxHeight + 20,),
 
                   HomeScreenTopMenu(),
 
-                  SizedBox( height: _sizedBoxHeight,),
+                  SizedBox( height: _sizedBoxHeight - 10,),
 
                   HomeScreenJumbotron(
                     title: 'Каталог открытых финансовых данных Сахалинской области',
@@ -60,7 +60,11 @@ class HomeScreenState extends State<HomeScreen> {
                     itemsCountTitle: '10+ Наборов',
                     bottomSheetContent: CategorySelectorSheet(),
                   ),
-                  CardStackWidget(),
+                  CardStackWidget(backgroundGradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [Colors.blue, Colors.pink[800]],
+                  ),),
 
                   SizedBox( height: _sizedBoxHeight,),
                   
@@ -70,7 +74,11 @@ class HomeScreenState extends State<HomeScreen> {
                     itemsCountTitle: '10+ Наборов',
                     bottomSheetContent: PeriodSelectorSheet(),
                   ),
-                  CardStackWidget(),
+                  CardStackWidget(backgroundGradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [Colors.amberAccent[400], Colors.red],
+                  ),),
 
                   SizedBox(height: _sizedBoxHeight,),
 
