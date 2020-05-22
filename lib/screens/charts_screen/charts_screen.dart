@@ -20,19 +20,23 @@ class ChartsScreenState extends State<ChartsScreen> {
     }
     
     return Scaffold(
+      backgroundColor: Color(0xff202040),
       body: Column(
         children: <Widget>[
+          SizedBox(height: 30,),
           BarChartSample2(selectedRows: _selectedDataSetRows,),
           Container(
-            height: 400,
+            height: 360,
             child: ListView.builder(
               itemCount: _selectedDataSetRows.length,
               itemBuilder: (context, index) {
                 return Container(
-                  height: 40,
+                  decoration: BoxDecoration(
+                    border: Border(bottom: BorderSide(color: Colors.white10))
+                  ),
                   child: ListTile(
-                    leading: Text('${index + 1}'),
-                    title: Text(_selectedDataSetRows[index].name),
+                    leading: Text('${index + 1}', style: TextStyle(color: Colors.white),),
+                    title: Text(_selectedDataSetRows[index].name, style: TextStyle(color: Colors.white)),
                   ),
                 );
               },

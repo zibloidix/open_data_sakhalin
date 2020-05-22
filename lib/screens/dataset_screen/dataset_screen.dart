@@ -20,6 +20,7 @@ class DatasetScreenState extends State<DatasetScreen>{
   DataSet dataSet;
   Random _random = Random();
   bool _showCheckbox = false;
+  int _selectedRowsCount = 0;
   List<DataSetRow> _mockDataSetRows = getMockDataSetRow();
   
   @override
@@ -65,14 +66,30 @@ class DatasetScreenState extends State<DatasetScreen>{
                             ],
                           )
                         ),
-                        
-                        IconButton(
-                          icon: Icon(Icons.insert_chart, color: Colors.white, size: 30,),
-                          onPressed: () {
+
+                        InkWell(
+                          onTap: () {
                             List<DataSetRow> _selectedRows = _getSelectedRows();
-                            Navigator.of(context).pushNamed('/charts', arguments: _selectedRows); 
+                            Navigator.of(context).pushNamed('/charts', arguments: _selectedRows);
                           },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.green,
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(Icons.insert_chart, color: Colors.white54),
+                                SizedBox(width: 5,),
+                                Text(
+                                  _selectedRowsCount == 0 ? 'Нет выборки' : 'В выборке: $_selectedRowsCount', 
+                                  style: TextStyle(color: Colors.white)),
+                              ],
+                            )
+                          ),
                         ),
+                        
                       ],
                       
                     ),
@@ -126,7 +143,7 @@ class DatasetScreenState extends State<DatasetScreen>{
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
-                          _getCompareButton('Сравнить'),
+                          _getCompareButton('Выбрать'),
                           SizedBox(width: 10,),
                           _getFilterButton('Раздел'),
                           SizedBox(width: 10,),
@@ -150,6 +167,11 @@ class DatasetScreenState extends State<DatasetScreen>{
                                 value: _mockDataSetRows[index].isSelected,
                                 onChanged: (value){
                                   setState(() {
+                                    if (value == true) {
+                                      _selectedRowsCount += 1;
+                                    } else {
+                                       _selectedRowsCount -= 1;
+                                    }
                                     _mockDataSetRows[index].isSelected = value;
                                   });
                                   
@@ -196,14 +218,17 @@ class DatasetScreenState extends State<DatasetScreen>{
       child: Container(
         child: Row(
           children: <Widget>[
-            Text('$name'),
+            
+            Icon(Icons.check_box, color: Colors.black54, size: 22,),
             SizedBox(width: 5,),
-            Icon(Icons.check),
+            Text('$name'),
+            
+            
           ],
         ),
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 4),
         decoration: BoxDecoration(
-          color: Colors.greenAccent,
+          color: Colors.black12,
           borderRadius: BorderRadius.circular(20),
         ),
       ),
