@@ -19,36 +19,51 @@ class ChartsScreenState extends State<ChartsScreen> {
         _selectedDataSetRows = [];
     }
     
-    return Scaffold(
-      backgroundColor: Color(0xff202040),
-      body: LayoutBuilder(
-        builder: (context, constraints) => Container(
-          height: constraints.maxHeight,
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 20,),
-              Container(
-                height: constraints.maxHeight * 0.4 - 20,
-                child: BarChartSample2(selectedRows: _selectedDataSetRows,)
-              ),
-              Container(
-                height: constraints.maxHeight * 0.6,
-                child: ListView.builder(
-                  itemCount: _selectedDataSetRows.length,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        border: Border(bottom: BorderSide(color: Colors.white10))
-                      ),
-                      child: ListTile(
-                        leading: Text('${index + 1}', style: TextStyle(color: Colors.white54),),
-                        title: Text(_selectedDataSetRows[index].name, style: TextStyle(color: Colors.white70)),
-                      ),
-                    );
-                  },
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.red,
+        gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [
+            Color(0xff182952), Color(0xff2b3595)
+          ]
+        )
+      ),
+      child: Scaffold(
+        
+        backgroundColor: Colors.transparent,
+        body: LayoutBuilder(
+          builder: (context, constraints) => Container(
+            height: constraints.maxHeight,
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 40,),
+                Container(
+                  height: constraints.maxHeight * 0.4 - 40,
+                  child: BarChartSample2(selectedRows: _selectedDataSetRows,)
                 ),
-              ),
-            ],
+                Container(
+                  height: constraints.maxHeight * 0.6,
+                  child: ListView.builder(
+                    itemCount: _selectedDataSetRows.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        decoration: BoxDecoration(
+                          border: Border(bottom: BorderSide(color: Colors.white10))
+                        ),
+                        child: ListTile(
+                          // leading: Text('${index + 1}', style: TextStyle(color: Colors.white54),),
+                          title: Text(_selectedDataSetRows[index].name, style: TextStyle(color: Colors.white70, fontSize: 14)),
+                          trailing:  Text('${index + 1}', style: TextStyle(color: Colors.white54),),
+                        ),
+                        
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

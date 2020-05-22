@@ -36,14 +36,20 @@ class DatasetScreenState extends State<DatasetScreen>{
         children: <Widget>[
           SizedBox.expand(
             child: Container(
-              color: Colors.deepPurple,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.deepPurple[800], Colors.pink[900]]
+                ),
+              ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                      height: 30,
+                      height: 50,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -66,24 +72,28 @@ class DatasetScreenState extends State<DatasetScreen>{
                             ],
                           )
                         ),
-
+                        SizedBox(width: 10,), 
+                        Icon(Icons.star_border, color: Colors.amberAccent,),
+                        Spacer(),
                         InkWell(
                           onTap: () {
-                            List<DataSetRow> _selectedRows = _getSelectedRows();
-                            Navigator.of(context).pushNamed('/charts', arguments: _selectedRows);
+                            if (_selectedRowsCount > 0) {
+                              List<DataSetRow> _selectedRows = _getSelectedRows();
+                              Navigator.of(context).pushNamed('/charts', arguments: _selectedRows);
+                            }
                           },
                           child: Container(
-                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            padding: EdgeInsets.symmetric(horizontal: _selectedRowsCount == 0 ? 4 : 10, vertical: 4),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: Colors.green,
                             ),
                             child: Row(
                               children: <Widget>[
-                                Icon(Icons.insert_chart, color: Colors.white54),
-                                SizedBox(width: 5,),
+                                Icon(Icons.donut_large, color: Colors.white54),
+                                
                                 Text(
-                                  _selectedRowsCount == 0 ? 'Нет выборки' : 'В выборке: $_selectedRowsCount', 
+                                  _selectedRowsCount == 0 ? '' : '  В выборке: $_selectedRowsCount', 
                                   style: TextStyle(color: Colors.white)),
                               ],
                             )
@@ -93,6 +103,7 @@ class DatasetScreenState extends State<DatasetScreen>{
                       ],
                       
                     ),
+                    SizedBox(height: 20,),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
@@ -121,7 +132,7 @@ class DatasetScreenState extends State<DatasetScreen>{
     return DraggableScrollableSheet(
         initialChildSize: 0.2,
         minChildSize: 0.2,
-        maxChildSize: 0.88,
+        maxChildSize: 0.85,
         builder: (context, scrollController) {
           return Container(
             decoration: BoxDecoration(
@@ -132,7 +143,7 @@ class DatasetScreenState extends State<DatasetScreen>{
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
+              padding: const EdgeInsets.only(top: 8.0, left: 4, right: 4.0),
               child: LayoutBuilder(
                 builder: (context, constraints) => Column(
                   
@@ -215,23 +226,18 @@ class DatasetScreenState extends State<DatasetScreen>{
           _showCheckbox = !_showCheckbox;
         });
       },
-      child: Container(
-        child: Row(
-          children: <Widget>[
-            
-            Icon(Icons.check_box, color: Colors.black54, size: 22,),
-            SizedBox(width: 5,),
-            Text('$name'),
-            
-            
-          ],
-        ),
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 4),
-        decoration: BoxDecoration(
-          color: Colors.black12,
-          borderRadius: BorderRadius.circular(20),
-        ),
+      child: CircleAvatar(
+        backgroundColor: Colors.green,
+        child: Icon(Icons.check_box, color: Colors.white, size: 20,),
       ),
+      // child: Container(
+      //   child: ,
+      //   padding: EdgeInsets.symmetric(horizontal: 3, vertical: 4),
+      //   decoration: BoxDecoration(
+      //     color: Colors.black12,
+      //     borderRadius: BorderRadius.circular(30),
+      //   ),
+      // ),
     );
   }
 

@@ -38,11 +38,11 @@ class CatalogScreenState extends State<CatalogScreen> {
               curve: Curves.fastOutSlowIn,
               height: _searchBarHeight,
               color: Colors.deepPurpleAccent[400],
-              padding: EdgeInsets.only(left: 20, right: 20),
+              padding: EdgeInsets.only(left: 10, right: 10),
               child: Column(
                 
                 children: <Widget>[
-                  SizedBox(height: 40,),
+                  SizedBox(height: 45,),
                   Container(
                     height: 45,
                     padding: EdgeInsets.symmetric(vertical: 1),
@@ -100,26 +100,29 @@ class CatalogScreenState extends State<CatalogScreen> {
                 itemCount: datasets.length,
                 itemBuilder: (context, index) {
                   return Container(
-                    padding: EdgeInsets.only(top: 5, bottom: 5),
-                    color: Colors.white,
+                    padding: EdgeInsets.only(top: 8, bottom: 8),
+                    decoration: BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(color: Color(0xfff1f1f1))
+                      )
+                    ),
+                    
                     child: ListTile(
-                      leading: CircleAvatar(
-                        child:  Text(datasets[index].name[0].toUpperCase()),
-                        backgroundColor: Colors.deepPurpleAccent[400],
-                      ),
+                      
                       title: Text(
                         datasets[index].name,
-                        style: TextStyle( fontSize: 14),
+                        style: TextStyle( fontSize: 16),
                       ),
-                      subtitle: Row(
-                        children: <Widget>[
-                          Text(datasets[index].createdDate),
-                        ],
-                      ),
-                      trailing: IconButton(
-                        icon: Icon(Icons.star_border),
-                        onPressed: (){},
-                      ),
+                      // subtitle: Row(
+                      //   mainAxisAlignment: MainAxisAlignment.end,
+                      //   children: <Widget>[
+                      //     Text(datasets[index].createdDate),
+                      //   ],
+                      // ),
+                      // trailing: IconButton(
+                      //   icon: Icon(Icons.star_border),
+                      //   onPressed: (){},
+                      // ),
                       onTap: () => Navigator.of(context).pushNamed('/dataset', arguments: datasets[index]),
                     ),
                   );

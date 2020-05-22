@@ -34,7 +34,7 @@ class NotificationsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(0.0),
         child: ListView.builder(
           itemCount: 25,
           itemBuilder: (context, index) {
@@ -42,9 +42,10 @@ class NotificationsScreen extends StatelessWidget {
             AppNotification notification = notifications[randomIndex];
             DateTime date = faker.date.dateTime(minYear: 2020, maxYear: 2020);
 
-            return Container(
-              width: double.infinity,
-              child: Card(
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 18.0),
+              child: Container(
+                width: double.infinity,
                 child: ListTile(
                   leading: CircleAvatar(child: Icon(notification.icon), backgroundColor: notification.color, foregroundColor: Colors.white,),
                   title: Row(

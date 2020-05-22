@@ -73,7 +73,7 @@ class BarChartSample2State extends State<BarChartSample2> {
       child: Card(
         elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-        color: const Color(0xff202040),
+        color: Colors.transparent,
         child: Padding(
           padding: const EdgeInsets.all(0),
           child: Column(
@@ -81,22 +81,8 @@ class BarChartSample2State extends State<BarChartSample2> {
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              SizedBox(height: 20,),
-              Container(
-                height: 30,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.donut_large, color: Color(0xff53fdd7)),
-                    SizedBox(width: 5),
-                    Text('Сумма за 2020 год', style: TextStyle(color: Color(0xff53fdd7))),
-                    SizedBox(width: 15),
-                    Icon(Icons.donut_large, color: Color(0xffff5182)),
-                    SizedBox(width: 5),
-                    Text('Сумма за 2021 год', style: TextStyle(color: Color(0xffff5182))),
-                  ],
-                ),
-              ),
+              SizedBox(height: 10,),
+              
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
@@ -202,6 +188,22 @@ class BarChartSample2State extends State<BarChartSample2> {
                       barGroups: showingBarGroups,
                     ),
                   ),
+                ),
+              ),
+              
+              Container(
+                height: 30,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(Icons.donut_large, color: Color(0xff53fdd7)),
+                    SizedBox(width: 5),
+                    Text('Сумма за 2020 год', style: TextStyle(color: Color(0xff53fdd7))),
+                    SizedBox(width: 15),
+                    Icon(Icons.donut_large, color: Color(0xffff5182)),
+                    SizedBox(width: 5),
+                    Text('Сумма за 2021 год', style: TextStyle(color: Color(0xffff5182))),
+                  ],
                 ),
               ),
               const SizedBox(
