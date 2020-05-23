@@ -6,6 +6,7 @@ import 'package:open_data_sakhalin/screens/dataset_screen/dataset_screen.dart';
 import 'package:open_data_sakhalin/screens/home_screen/home_screen.dart';
 import 'package:open_data_sakhalin/screens/dataset_screen.dart';
 import 'package:open_data_sakhalin/screens/dataset_editor_screen.dart';
+import 'package:open_data_sakhalin/screens/news_screen/news_screen.dart';
 import 'package:open_data_sakhalin/screens/notifications_screen/notifications_screen.dart';
 import 'package:open_data_sakhalin/screens/search_screen/search_screen.dart';
 
@@ -27,6 +28,7 @@ class OpenDataSakhalin extends StatelessWidget {
         '/dataset': (context) => DatasetScreen(),
         '/add': (context) => AddScreen(),
         '/charts': (context) => ChartsScreen(),
+        '/news': (context) => NewsScreen(),
       }
     );
   }
