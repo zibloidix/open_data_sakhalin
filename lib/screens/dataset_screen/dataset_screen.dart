@@ -21,6 +21,7 @@ class DatasetScreenState extends State<DatasetScreen>{
   Random _random = Random();
   bool _showCheckbox = false;
   int _selectedRowsCount = 0;
+  bool _isStarSelect = false;
   List<DataSetRow> _mockDataSetRows = getMockDataSetRow();
   
   @override
@@ -72,8 +73,16 @@ class DatasetScreenState extends State<DatasetScreen>{
                             ],
                           )
                         ),
-                        SizedBox(width: 10,), 
-                        Icon(Icons.star_border, color: Colors.amberAccent,),
+                        SizedBox(width: 5,), 
+                        IconButton(
+                          onPressed: () {
+                            setState(() {
+                              _isStarSelect = !_isStarSelect;
+                            });
+                           // isStarSelect = !_isStarSelect ;
+                          },
+                          icon: Icon(_isStarSelect == false ? Icons.star_border : Icons.star, color: Colors.amberAccent,)
+                        ),
                         Spacer(),
                         InkWell(
                           onTap: () {

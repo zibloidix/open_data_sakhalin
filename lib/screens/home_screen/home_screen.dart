@@ -74,11 +74,14 @@ class HomeScreenState extends State<HomeScreen> {
                     itemsCountTitle: '10+ Наборов',
                     bottomSheetContent: PeriodSelectorSheet(),
                   ),
-                  CardStackWidget(backgroundGradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
-                    colors: [Colors.amberAccent[400], Colors.red],
-                  ),),
+                  CardStackWidget(
+                    backgroundGradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [Colors.amberAccent[400], Colors.red],
+                    ),
+                    icon: Icons.star,
+                  ),
 
                   SizedBox(height: _sizedBoxHeight,),
 

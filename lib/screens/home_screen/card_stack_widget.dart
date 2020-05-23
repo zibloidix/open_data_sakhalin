@@ -7,8 +7,9 @@ class CardStackWidget extends StatelessWidget {
 
   List<DataSet> datasets = getDataSetsCatalog();
   LinearGradient backgroundGradient;
+  IconData icon;
 
-  CardStackWidget({Key key, this.backgroundGradient}): super(key: key);
+  CardStackWidget({Key key, this.backgroundGradient, this.icon}): super(key: key);
 
   @override
   Widget build(BuildContext build) {
@@ -42,22 +43,28 @@ class CardStackWidget extends StatelessWidget {
                     style: TextStyle(fontSize: 22, color: Colors.white),
                   ),
                   SizedBox( height: 10),
-                  Container(
-                    width: 100,
-                    padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 6.0),
-                    decoration: BoxDecoration(
-                      color: Colors.black26,
-                      borderRadius: BorderRadius.circular(20),
-                      
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Icon(Icons.remove_red_eye, color: Colors.white54,),
-                        SizedBox(width: 5,),
-                        Text('${datasets[index].viewCount}', style: TextStyle( color: Colors.white),),
-                      ],
-                    ),
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        width: 100,
+                        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 6.0),
+                        decoration: BoxDecoration(
+                          color: Colors.black26,
+                          borderRadius: BorderRadius.circular(20),
+                          
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Icon(Icons.remove_red_eye, color: Colors.white54,),
+                            SizedBox(width: 5,),
+                            Text('${datasets[index].viewCount}', style: TextStyle( color: Colors.white),),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 5,),
+                      icon == null ? SizedBox() : Icon(icon, color: Colors.yellow[700],),
+                    ],
                   ),
                   
                 ],
