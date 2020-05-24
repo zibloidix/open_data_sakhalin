@@ -197,7 +197,6 @@ class DatasetScreenState extends State<DatasetScreen>{
                                   
                                 },
                               ),
-                              // trailing: SizedBox(),
                               title: Padding(
                                 padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
                                 child: Text(_mockDataSetRows[index].name),
@@ -239,30 +238,51 @@ class DatasetScreenState extends State<DatasetScreen>{
         backgroundColor: Colors.green,
         child: Icon(Icons.check_box, color: Colors.white, size: 20,),
       ),
-      // child: Container(
-      //   child: ,
-      //   padding: EdgeInsets.symmetric(horizontal: 3, vertical: 4),
-      //   decoration: BoxDecoration(
-      //     color: Colors.black12,
-      //     borderRadius: BorderRadius.circular(30),
-      //   ),
-      // ),
     );
   }
 
   Widget _getFilterButton(name) {
-    return Container(
-      child: Row(
-        children: <Widget>[
-          Text('$name'),
-          SizedBox(width: 5,),
-          Icon(Icons.keyboard_arrow_down),
-        ],
-      ),
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 4),
-      decoration: BoxDecoration(
-        color: Colors.black12,
-        borderRadius: BorderRadius.circular(20),
+    return InkWell(
+      onTap: () {
+        showDialog(
+          context: context,
+          builder: (_) {
+            return SimpleDialog(
+              contentPadding: EdgeInsets.only(bottom: 20),
+              title: Text(''),
+              titlePadding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      suffixIcon: Icon(Icons.search),
+                      hintText: 'Укажите значение',
+                    ),
+                  ),
+                ),
+                FlatButton(
+                  onPressed: (){},
+                  child: Text('Применить'),
+                ),
+              ],
+            );
+          }
+        );
+      },
+      child: Container(
+        child: Row(
+          children: <Widget>[
+            Text('$name'),
+            SizedBox(width: 5,),
+            Icon(Icons.keyboard_arrow_down),
+          ],
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+        decoration: BoxDecoration(
+          color: Colors.black12,
+          borderRadius: BorderRadius.circular(20),
+        ),
       ),
     );
   }
