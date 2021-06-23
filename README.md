@@ -10,8 +10,17 @@
 Приложение написано на Flutter+Dart под Android.
 
 ## Скриншоты
-![image_01](docs/image_01.jpg "Главный экран")![image_02](docs/image_02.jpg "Главный экран - Популярные наборы")![image_03](docs/image_02.jpg "Главный экран - Избранные наборы и всплывающий фильтр")
-![image_04](docs/image_04.jpg "Экран набора данных")![image_05](docs/image_05.jpg "Экран набора данных с графиком")![image_06](docs/image_06.jpg "Экран добавления набора данных")
+<p>
+  <img src="docs/image_01.jpg" alt="image_01" width="220" title="Главный экран">
+  <img src="docs/image_02.jpg" alt="image_02" width="220" title="Главный экран - Популярные наборы">
+  <img src="docs/image_03.jpg" alt="image_03" width="220" title="Главный экран - Избранные наборы и всплывающий фильтр">
+</p>
+
+<p>
+  <img src="docs/image_03.jpg" alt="image_03" width="220" title="Экран набора данных">
+  <img src="docs/image_04.jpg" alt="image_04" width="220" title="Экран набора данных с графиком">
+  <img src="docs/image_05.jpg" alt="image_05" width="220" title="Экран добавления набора данных">
+</p>
 
 ## Видео с описанием работы
 
