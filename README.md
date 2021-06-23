@@ -1,16 +1,18 @@
-# open_data_sakhalin
+# Мобильное приложение open_data_sakhalin
 
-A new Flutter project.
+## Описание
+Приложение создано для участия в конкурсе BudgetApps 2020 Министерства финансов Сахалинской области. Приложение решает проблему - пользователю неудобно работать с наборами открытых данных на мобильном устройстве. Неудобство заключается в том, что:
+1. Описание набора данных и сам набор дапнных хранятся в разных файлах
+2. Работа с большим объемом данных ресурсоемкая операция для мобильного устройства и часто не хватает производительности
+3. Набор данных можно только посмотреть, нельзя данные обработать, сравнить, построить график
 
-## Getting Started
+## Технологический стек
+Приложение написано на Flutter+Dart под Android.
 
-This project is a starting point for a Flutter application.
+## Скриншоты
+![image_01](docs/image_01.jpg "Главный экран")![image_02](docs/image_02.jpg "Главный экран - Популярные наборы")![image_03](docs/image_02.jpg "Главный экран - Избранные наборы и всплывающий фильтр")
+![image_04](docs/image_04.jpg "Экран набора данных")![image_05](docs/image_05.jpg "Экран набора данных с графиком")![image_06](docs/image_06.jpg "Экран добавления набора данных")
 
-A few resources to get you started if this is your first Flutter project:
+## Видео с описанием работы
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Ссылка на Youtube](https://www.youtube.com/watch?v=w5m7scGxOx4)
