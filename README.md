@@ -17,9 +17,9 @@
 </p>
 
 <p>
-  <img src="docs/image_03.jpg" alt="image_03" width="220" title="Экран набора данных">
-  <img src="docs/image_04.jpg" alt="image_04" width="220" title="Экран набора данных с графиком">
-  <img src="docs/image_05.jpg" alt="image_05" width="220" title="Экран добавления набора данных">
+  <img src="docs/image_04.jpg" alt="image_04" width="220" title="Экран набора данных">
+  <img src="docs/image_05.jpg" alt="image_05" width="220" title="Экран набора данных с графиком">
+  <img src="docs/image_06.jpg" alt="image_06" width="220" title="Экран добавления набора данных">
 </p>
 
 ## Видео с описанием работы
